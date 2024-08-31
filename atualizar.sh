@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Caminho do diretório do projeto
-PROJECT_DIR="/home/novo-usuario/sitexanxere/"
+PROJECT_DIR="/home/novo_usuario/sitexanxere/"
 
 # Nome do contêiner
 CONTAINER_NAME="my-django-app"
