@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" href="{% static '/stylegaleria.css' %}">
+    <title>Galeria de Fotos Xanxerê</title>
+    <style>
+        #galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+        .fotoLegenda {
+            width: 28%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .fotoLegenda img {
+            width: 72%; /* Reduzido de 90% para 72% (90% * 0.8) */
+            height: 144px; /* Reduzido de 180px para 144px (180px * 0.8) */
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .fotoLegenda:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .fotoLegenda:hover {
+            font-size: 16px; /* Reduzido de 18px para 16px */
+        }
+        @media (max-width: 768px) {
+            .fotoLegenda {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .fotoLegenda {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conteudo">
+        <header>
+            <nav>
+                <h1>Conheça Xanxerê</h1>
+
+                <ul class="menu">
+                    <li><a href="/">Pontos Turisticos</a></li>
+                    <li><a href="/historia">Historia e Cultura</a></li>
+                    <li><a href="/galeria">Galeria de Fotos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="galeria"></div>
+    </div>
+
+    <script>
+        const galeria = document.getElementById("galeria");
+        // lista das fotos e legendas
+        const urlFotos = {
+            "Cascata S. Manela": "https://i.ibb.co/1m5QWqg/Cascata-S-Manela.png",
+            "CTG Espelho da Tradição": "https://i.ibb.co/dck637y/CTG-Espelho-da-Tradi-o.jpg",
+            "Ecoparque Xanxerê": "https://i.ibb.co/yPhZw0y/Ecoparque-Xanxer.jpg",
+            "Igreja Matriz Xanxerê": "https://i.ibb.co/PxD4ykT/Igreja-Matriz-Xanxer.jpg",
+            "Kartódromo Jean Paulo Picinatto": "https://i.ibb.co/xmZpSpY/Kart-dromo-Jean-Paulo-Picinatto.jpg",
+            "Parque de Exposições Rovilho Bortoluzzi": "https://i.ibb.co/qjZ1J6Q/Parque-de-Exposi-es-Rovilho-Bortoluzzi.png",
+            "Praça Tiradentes": "https://i.ibb.co/KwNpVtk/Pra-a-Tiradentes.png",
+            "Agenor Home Made": "https://i.ibb.co/Gdy2V2G/Agenor-Home-Made.png",
+            "Agenor Home Made - Prato": "https://i.ibb.co/DCQFG8c/Agenor-Home-Made-Prato.png",
+            "Café do Mestre": "https://i.ibb.co/BGZqSZw/Caf-do-Mestre.jpg",
+            "Café do Mestre - Prato": "https://i.ibb.co/smRBdyK/Caf-do-Mestre-prato.jpg",
+            "Fino Sabor": "https://i.ibb.co/3MrDBFy/Fino-Sabor.jpg",
+            "Fino Sabor - Prato": "https://i.ibb.co/hKH54dw/Fino-Sabor-prato.jpg",
+            "Heróis do Hambúrguer": "https://i.ibb.co/f0Kgy5J/Herois-do-Hamburguer.png",
+            "Heróis do Hambúrguer - Prato": "https://i.ibb.co/xhM0jKS/Herois-do-Hamburguer-prato.jpg",
+            "O Costelão": "https://i.ibb.co/TYgLfXy/O-Costel-o.png",
+            "O Costelão - Prato": "https://i.ibb.co/nBD81SN/O-Costel-o-prato.png",
+            "O Pastelão": "https://i.ibb.co/vD246PY/O-Pastel-o.jpg",
+            "O Pastelão - Prato": "https://i.ibb.co/S3jVWpz/O-Pastel-o-prato.png",
+            "Padoça do Mano": "https://i.ibb.co/QHNRM84/Pado-a-do-Mano.png",
+            "Padoça do Mano - Prato": "https://i.ibb.co/3ycpD1S/Pado-a-do-Mano-Prato.jpg",
+            "Pastelândia": "https://i.ibb.co/WVG92sM/Pastelandia.jpg",
+            "Pastelândia - Prato": "https://i.ibb.co/RQ9Yc8S/Pastelandia-prato.png",
+            "Restaurante Bebber": "https://i.ibb.co/4TPM4vC/Restaurante-Bebber.jpg",
+            "Restaurante Bebber - Prato": "https://i.ibb.co/x3YL2T4/Restaurante-Bebber-prato.png",
+            "Vista Noturna Xanxerê": "https://i.ibb.co/0nsPWC3/Vista-Noturna-Xanxere.jpg",
+        };
+
+        const ids = Object.keys(urlFotos);
+        for (const id of ids) {
+            const fotoLegenda = document.createElement('div');
+            fotoLegenda.className = "fotoLegenda";
+            fotoLegenda.innerHTML = `<img src="${urlFotos[id]}" alt="${id}"><div>${id}</div>`;
+            galeria.appendChild(fotoLegenda);
+        }
+    </script>
+</body>
+
+</html>

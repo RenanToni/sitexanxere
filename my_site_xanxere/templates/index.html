@@ -1,0 +1,127 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Conheça Xanxerê</title>
+
+        <style>
+           img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+        max-height: 400px;
+        object-fit: contain;
+        border-radius: 15px;
+        border: 2px solid white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    img::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+           
+        </style>
+    </head>
+    <link rel = "stylesheet" href="{% static '/style.css' %}">
+      
+    <body>
+        <!-- Menu -->
+        <header>
+            <nav>
+            <h1>Conheça Xanxerê</h1>
+
+            <ul class="menu">
+                <li><a href="/">Pontos Turisticos</a></li>
+                <li><a href="/historia">Historia e Cultura</a></li>
+                <li><a href="/galeria">Galeria de Fotos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="imagem"><img src="https://i.ibb.co/PxD4ykT/Igreja-Matriz-Xanxer.jpg"></div> 
+    
+        <div class="principal">
+        <h1>Atrações Turísticas e Gastronomia de Xanxerê</h1>
+        
+        <p>A Capital Estadual do milho, além de ter excelentes terras agrícolas e um feira estadual para chamar de sua, a ExpoFemi, com muitas atrações nacionais, que ocorre a cada 2 (dois) anos, também conta com essas atrações permanente.</p>
+        
+        <h2>Cascata S. Manela</h2>
+        <div class="separacao">
+        <p>- Três belas cascatas no Rio Chapecozinho;</p>
+        <p>- Área de lazer com camping e churrasqueiras;.</p>
+        <p>- Principal ponto turístico da cidade, com selo Embratur;</p>
+        <p>- Atrai milhares de turistas, especialmente no verão.</p>
+        </div>
+
+        <h2>Praça Tiradentes</h2>
+        <div class="separacao">
+        <p>- Cartão postal do centro da cidade;</p>
+        <p>- Praça arborizada que atrai diversas espécies de pássaros;</p>
+        <p>- Recentemente revitalizada.</p>
+    </div>
+
+        <h2>Kartódromo Jean Paulo Picinatto</h2>
+        <div class="separacao">
+        <p>- Atração para amantes de velocidade;</p>
+        <p>- Sedia competições locais, regionais e interestaduais.</p>
+    </div>
+
+        <h2>Parque de Exposições Rovilho Bortoluzzi</h2>
+        <div class="separacao">
+        <p>- Área de 200 mil m² às margens da BR-282;</p>
+        <p>- Sede da ExpoFemi (Exposição Festa Estadual do Milho);</p>
+        <p> - Abriga o famoso "Milho de 50m de altura".</p>
+    </div>
+
+        <h2>CTG Espelho da Tradição</h2>
+        <div class="separacao">
+        <p>- Preserva as tradições gaúchas;</p>
+        <p>- Realiza eventos como o Rodeio Interestadual e fandangos tradicionalistas.</p>
+    </div>
+
+        <h2>Ecoparque Xanxerê</h2>
+        <div class="separacao">
+        <p>- Novo espaço verde para lazer e contato com a natureza;</p>
+        <p>- Possui um belo lago, áreas arborizadas e trilhas para caminhada;</p>
+        <p>- Ideal para passeios, piqueniques e atividades ao ar livre;</p>
+        <p>-  Opção perfeita para quem busca tranquilidade e contato com o meio ambiente.</p>
+    </div>
+
+        </div>
+        <h2>Gastronomia Diversificada</h2>
+
+        <p>Xanxerê se destaca também por sua rica e variada oferta gastronômica. A cidade conta com uma culinária diversificada, que vai desde restaurantes italianos e pizzarias até churrascarias tradicionais e padarias artesanais. Entre os estabelecimentos mais renomados, destacam-se:
+        </p>
+
+        <div class="separacao">
+            <p><b>*</b>Padoca do Mano;</p>
+            <p><b>*</b>Agenor Home Made;</p>
+            <p><b>*</b>Fino Sabor;</p>
+            <p><b>*</b>O Costelão;</p>
+            <p><b>*</b>Restaurante Bebber;</p>
+            <p><b>*</b>Café do Mestre;</p>
+            <p><b>*</b>Heróis do Hamburguer;</p>
+            <p><b>*</b>Pastelandia;</p>
+            <p><b>*</b>O Pastelão.</p>
+        </div>
+
+        <p>Esses restaurantes oferecem uma ampla variedade de opções culinárias, atendendo a diversos gostos e preferências. Seja para saborear uma autêntica pizza italiana, degustar um churrasco, experimentar hambúrgueres artesanais ou deliciar-se com pastéis fresquinhos, Xanxerê tem opções para todos os paladares.
+        </p>
+        <p>Xanxerê combina belezas naturais, cultura gaúcha, tradição agrícola e uma cena gastronômica vibrante, oferecendo experiências únicas para todos os gostos.</p>
+    </main>
+
+
+    </body>
+</html>

@@ -1,0 +1,79 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>História de Xanxerê</title>
+
+        <style>
+            .image-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 20px;
+            }
+        
+            .image-gallery figure {
+                margin: 10px;
+                text-align: center;
+            }
+        
+            .image-gallery img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                border: 2px solid white;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+        
+            .image-gallery figcaption {
+                margin-top: 10px;
+                font-style: italic;
+            }
+        </style>
+
+    </head>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    
+    <body>
+        <!-- Menu -->
+        <header>
+            <nav>
+            <h1>Conheça Xanxerê</h1>
+            <ul class="menu">
+                <li><a href="/">Pontos Turisticos</a></li>
+                <li><a href="/historia">Historia e Cultura</a></li>
+                <li><a href="/galeria">Galeria de Fotos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Historia de Xanxere</h1>
+        <p>Xanxerê, cujo nome significa "Campina da Cascavel" na língua Kaingang, tem uma história rica e cheia de reviravoltas. Imagine só: antes de ser a "Capital Estadual do Milho", esse pedacinho de Santa Catarina era o lar de índios Kaingang e Guaranis, que viviam tranquilamente por ali até por volta de 1.800.</p>
+        <p>A paz dos indígenas foi interrompida em 1641, quando o bandeirante Jerônimo Pedroso de Barros chegou à região em busca de índios para escravizar. Mas a história de Xanxerê como conhecemos hoje começou mesmo quase 200 anos depois, em 1839, quando um grupo de fazendeiros aventureiros decidiu explorar essas terras.</p>
+        <p>Entre esses desbravadores estava José Raimundo Fortes, um jovem mineiro que acabou ganhando uma grande área de terras chamada Campina do Gregório - justamente onde hoje fica o centro de Chapecó. Ele se apaixonou pelo lugar, formou família e se tornou um dos primeiros moradores do Oeste de Santa Catarina.</p>
+        <p>A região passou por várias transformações ao longo dos anos. Em 1882, foi fundada a Colônia Militar de Chapecó (que na verdade ficava em Xanxerê). A área mudou de nome algumas vezes: já foi Distrito de Generozópolis, Vila de Xanxerê, Distrito de Rui Barbosa, e voltou a ser Xanxerê.</p>
+        <p>Um fato curioso é que Xanxerê chegou a ser a sede do município de Chapecó por um tempo, entre 1919 e 1923. Depois disso, a sede municipal foi transferida para outros lugares, mas Xanxerê continuou crescendo, principalmente graças à extração de madeira.</p>
+        <p>Finalmente, em 30 de dezembro de 1953, Xanxerê conquistou sua independência, tornando-se um município separado de Chapecó. A instalação oficial aconteceu em 27 de fevereiro de 1954, em uma simples casa de madeira - bem diferente da cidade que conhecemos hoje!</p>
+        <p>Desde então, Xanxerê não parou de crescer. Hoje, é conhecida como uma das cidades que mais se desenvolvem em Santa Catarina, com uma economia forte baseada na agroindústria, especialmente na produção de milho.</p>
+        <p>E não podemos esquecer das pessoas que fizeram essa história: além dos indígenas originais, a cidade recebeu imigrantes de várias partes do mundo, incluindo italianos, alemães, portugueses, sírios, turcos, libaneses e poloneses. Essa mistura cultural fez de Xanxerê o lugar único e especial que é hoje!</p>
+
+        <div class="image-gallery">
+            <figure>
+                <img src="https://i.ibb.co/tp5Kp7S/vista-parcial-de-xanxere-em-1966.jpg" alt="Vista parcial de Xanxerê em 1966">
+                <figcaption>1. Vista parcial de Xanxerê no ano de 1966</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.ibb.co/rfzWMWT/Foto-de-novembro-de-1961-monstando-a-pavimenta-o-da-rua-principal-de-xanxere-Rua-Coronel-Passos-Maia.jpg" alt="Pavimentação da Rua Coronel Passos Maia em 1961">
+                <figcaption>2. Obra de pavimentação da Rua Coronel Passos Maia em novembro de 1961.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.ibb.co/m0Xh8M7/serraria-em-xanxere-em-1965.jpg" alt="Serraria em Xanxerê em 1965">
+                <figcaption>3. Serraria em Xanxerê no ano de 1965.</figcaption>
+            </figure>
+        </div>
+    </main>
+    </body>
+</html>
